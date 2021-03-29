@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/theme/base16-dark.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+		<style>
+			body,
+			html {
+				height: 100vh;
+				box-sizing: border-box;
+				background-color: gray;
+			}
+			.CodeMirror {
+				border: 1px solid gray;
+				height: 90vh;
+				font-size: 16px;
+			}
+			#python-out {
+				border: 1px solid gray;
+				height: 90vh;
+				overflow-y: auto;
+				font-size: 16px;
+				background-color: black;
+				color: red;
+				padding-left: 30px;
+				padding-top: 10px;
+				box-sizing: border-box;
+				font-family: "Source Code Pro", monospace;
+			}
+			.btn {
+				margin-top: 12px;
+				margin-left: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.languagePluginUrl =
+				"https://cdn.jsdelivr.net/pyodide/v0.17.0a2/full/";
+		</script>
+		<script src="https://cdn.jsdelivr.net/pyodide/v0.17.0a2/full/pyodide.js"></script>
+		<title>Online Python Editor</title>
+	</head>
+	<body>
+		<center class="row">
+			<a class="waves-effect waves-light btn" id="run-btn"
+				><i class="material-icons right">code</i>Run</a>
+			<a class="waves-effect waves-light btn" href="https://ritabratamaiti.github.io/ritabratamaiti/" target="_blank"><i class="material-icons right">cloud</i>About Me!</a>
+		</center>
+		<br />
+
+		<div class="row">
+			<div class="col s6">
+				<textarea
+					name="codearea"
+					id="codearea"
+					cols="30"
+					rows="100"
+				></textarea>
+			</div>
+
+			<div class="col s6">
+				<div id="python-out" style="white-space: pre-line"></div>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.60.0/mode/python/python.min.js"
+			integrity="sha512-jKm248sXyXbgbigmg1qdHZ7sKnQwpI2CW4Bv1DXbWHWcXRw7nafIjv8dxhbdt5wS0JGrwjxj+hBUEseM/PnjUA=="
+			crossorigin="anonymous"
+		></script>
+		<script src="app.js"></script>
+	</body>
+</html>
