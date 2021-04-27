@@ -22,6 +22,17 @@ runBtn.addEventListener("click", (e) => {
 	pyop.innerHTML = "";
 	runPython(pycode);
 })
+var autorun =
+
+setInterval(function(){
+
+let pycode = codemirrorEditor.getValue();
+
+pyop.innerHTML = "";
+
+runPython(pycode);
+
+}, 2000);
 
 let startcode = `
 import sys, io, traceback
