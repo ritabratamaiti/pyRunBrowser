@@ -44,16 +44,47 @@
 			}
 			#python-out {
 				border: 1px solid gray;
+
 				height: 90vh;
+
 				overflow-y: auto;
+
 				font-size: 16px;
+
 				background-color: black;
-				color: red;
+
 				padding-left: 30px;
+
 				padding-top: 10px;
+
 				box-sizing: border-box;
-				font-family: "Source Code Pro", monospace;
+
+				color: lightgreen;
+
+				font-family: 'Source Code Pro', monospace;
+
+				animation-duration: 1.0s;
+
+				animation-name: colorthing;
+
+				animation-iteration-count: infinite;
+
+				animation-direction: alternate;
 			}
+			@keyframes colorthing {
+
+				from {
+
+				`color: rgb(0, 255, 0);`                		
+				}
+
+				to {
+
+				color: rgb(14, 161, 14);
+
+				}
+
+				}
 			.btn {
 				margin-top: 12px;
 				margin-left: 10px;
